@@ -1,10 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
-
-
+ 
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
  <div class="row">
             <div class="col-md-12 image-container">
                 <img src="pics/starting.jpg"
@@ -29,8 +36,7 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
+        <br />
         <div class="row">
             <div class="col-md-12 " style=" text-align: center; ">
                 <h1>Plan Your Trip</h1>
@@ -172,7 +178,7 @@
                             src="pics/sarnath-5149032_1280.jpg" alt=""
                             srcset="">
                         <h6>text</h6>
-
+                        
                     </div>
                 </center>
             </div>
@@ -326,10 +332,12 @@
                                         placeholder="Contact Number">
                                     <input class="input input-element" name="Email" placeholder="Email">
                                     <textarea class="textinput input-element" placeholder="Message"></textarea>
-                                    <button class="button2">
+                                    <button class="button">
                                         Send
                                     </button>
                                 </div>
+                            
+
                                 <div class="social-media-icon-container">
                                     <div class="icon-block social-icon">
                                         <svg height="37.7" id="ihxs6" viewBox="0 0 37.701 37.7" width="37.701"
@@ -384,6 +392,77 @@
 
             </div>
         </div>
+         <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+        $(document).ready(function () {
+            $('.slider2').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                nextArrow: '<button type="button" class="slick-next">Next</button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            // Show the alert box when the page loads
+
+            showAlertBox();
+        });
+
+        function showAlertBox() {
+            const alertBox = document.getElementById('alert-box');
+            alertBox.classList.add('show');
+            setTimeout(function () {
+                closeAlert();
+            }, 10000);
+        }
+
+        function closeAlert() {
+            const alertBox = document.getElementById('alert-box');
+            alertBox.classList.remove('show');
+        }
+        window.onscroll = function () {
+            var button = document.getElementById("scrollTopButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    </script>
+
+       
 
 </asp:Content>
+
 
