@@ -12,7 +12,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <div class="alert">
  <div class="row">
+  <div id="alert-box" class="alert-box">
+            <center>
+                <span class="close-btn" onclick="closeAlert()">X</span>
+                <img src="pics/clint1.jpg" alt="" srcset="">
+            </center>
+        </div>
+
+    </div>
             <div class="col-md-12 image-container">
                 <img src="pics/starting.jpg"
                     alt="" srcset="" style="max-height: 400px; width: 100%;">
